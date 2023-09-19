@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    width: 23rem;
+    height: 23rem;
+    border: 15px solid grey;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 25vh;
+
+}
+
+.texte-content {
+    margin-top: 15%;
+    margin-left: 4%;
+}
+
+h2 {
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 10%;
+}
+
+#square, #minute {
+ width: 95%;
+ height: 35px;
+ background-color: black;
+ border: 1px solid white;
+ border-radius: 6px;
+ color: white;
+}
+
+input::placeholder {
+    color: white;
+    font-size: 11px;
+}
+
+#submit {
+    height: 30px;
+    width: 6rem;
+    background-color: #279EFF;
+    color: white;
+    border: none;
+}

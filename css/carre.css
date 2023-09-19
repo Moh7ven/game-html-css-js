@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* box-shadow: 0px 0px 3px inset red; */
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    height: 85vh;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.indic {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.square-card {
+    width: 5rem;
+    height: 4rem;
+    border: 5px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.minute-card {
+    width: 6rem;
+    height: 4rem;
+    border: 5px solid #279EFF;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #279EFF;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.attempts-card {
+    width: 7rem;
+    height: 4rem;
+    border: 5px solid orangered;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orangered;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.someGrid {
+    margin-top: 2%;
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+
+.someGrid div {
+    background-color: rgba(132, 132, 132, 0.924);
+}
