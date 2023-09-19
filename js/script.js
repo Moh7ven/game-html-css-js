@@ -1,10 +1,15 @@
 let form = document.querySelector("form");
 
+let mini = 0;
+let squ = 0;
+
+let info = [];
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let square = parseInt(e.target.children[0].value);
   let minute = parseInt(e.target.children[1].value);
-  let button = parseInt(e.target.children[2]);
+  let button = e.target.children[2];
   let error = "";
 
   if (square < 4 || square > 200) {
@@ -20,12 +25,46 @@ form.addEventListener("submit", (e) => {
     button.style.backgroundColor = "red";
     button.disabled = true;
 
-    setTimeout(()=>{
-        button.disabled = false;
-        button.textContent = "submit";
-        button.style.backgroundColor = "#279EFF";
-    },3000)
+    setTimeout(() => {
+      button.disabled = false;
+      button.textContent = "submit";
+      button.style.backgroundColor = "#279EFF";
+    }, 3000);
+  } else {
+    squ = square;
+    mini = minute;
+
+    genInfos(squ/2);
+
+    console.log(info);
   }
 
   console.log(square, minute);
 });
+
+function genColor() {
+  let color = [
+    "red",
+    "blue",
+    "yellow",
+    "purple",
+    "green",
+    "lime",
+    "skyblue",
+    "grey",
+    "orange",
+    "pink",
+  ];
+  let index = Math.floor(Math.random() * color.length);
+  console.log(index);
+  return color[index];
+}
+
+function genInfos(nombre) {
+  for (let i = 1; i <= nombre; i++) {
+    info.push({
+      nombre: i,
+      color: genColor(),
+    });
+  }
+}
