@@ -1,4 +1,4 @@
-let form = document.querySelector("form");
+/* let form = document.querySelector("form");
 
 let mini = 0;
 let squ = 0;
@@ -34,7 +34,7 @@ form.addEventListener("submit", (e) => {
     squ = square;
     mini = minute;
 
-    genInfos(squ/2);
+    genInfos(squ / 2);
 
     console.log(info);
   }
@@ -68,3 +68,24 @@ function genInfos(nombre) {
     });
   }
 }
+ */
+
+
+function getDivider(nombre) {
+  let divide = [];
+  let output = [];
+  for (let i = 2; i <= nombre - 1; i++) {
+    if (nombre % i === 0) {
+      let m1 = i;
+      let m2 = nombre / i;
+      if (!divide.includes(m1) && !divide.includes(m2)) {
+        divide.push(m1, m2);
+        let diff = m1 > m2 ? m1 - m2 : m2 - m1;
+        output.push({m1,m2,diff})
+      }
+    }
+  }
+  console.log(output);
+}
+
+getDivider(12);
