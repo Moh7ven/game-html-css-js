@@ -1,4 +1,4 @@
-/* let form = document.querySelector("form");
+let form = document.querySelector("form");
 
 let mini = 0;
 let squ = 0;
@@ -68,8 +68,6 @@ function genInfos(nombre) {
     });
   }
 }
- */
-
 
 function getDivider(nombre) {
   let divide = [];
@@ -81,11 +79,15 @@ function getDivider(nombre) {
       if (!divide.includes(m1) && !divide.includes(m2)) {
         divide.push(m1, m2);
         let diff = m1 > m2 ? m1 - m2 : m2 - m1;
-        output.push({m1,m2,diff})
+        output.push({ m1, m2, diff });
       }
     }
   }
   console.log(output);
+  output.sort((a, b) => a.diff - b.diff);
+  console.log(output);
+
+  return output[0];
 }
 
-getDivider(12);
+console.log(getDivider(12));

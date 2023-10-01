@@ -55,3 +55,18 @@ input::placeholder {
     color: white;
     border: none;
 }
+
+.gameContent {
+    position: absolute;
+    top: 0;
+    left: O;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.box {
+    display: grid;
+}
